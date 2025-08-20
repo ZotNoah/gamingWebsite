@@ -10,17 +10,20 @@
   
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body>  
   <div class="crt">
     <header>
-        <div class="music-controls">
-            <button id="music-toggle" class="buttonSmall">🔊 Music</button>
-        </div>  
-        <h1>WELCOME TO MY 8-BIT SITE</h1>
-        <div id="pressStart">
-            <p class="startText">Press Start to continue...</p>
-            <button class="button">▶ START</button>
-        </div>
+        <section id="introScreen" class="fade-in">
+            <div class="music-controls">
+                <button id="music-toggle" class="buttonSmall">🔊 Music</button>
+            </div>  
+            <h1>WELCOME TO MY 8-BIT SITE</h1>
+            <div id="pressStart" class="typewriter">
+                <p class="startText">Press Start to continue..</p>
+                <button id="startButton" class="button">▶ START</button>
+            </div>
+        </section>
+        
     </header>
 
     <main>
@@ -37,7 +40,166 @@
 
                 <p>I am passionate about building user-friendly, accessible websites and am eager to contribute to a professional development team.</p>
             </div>
+            <div class="levelControls">
+                <button class="back">▶ BACK</button>
+                <button class="next">▶ NEXT</button>
+            </div>
+            
 
+        </section>
+
+        <section id="projects" class="fade-in">
+            <div class="projectsTitle">
+                <h1>Projects</h1>
+                <p>Here are some of the projects I have worked on:</p>
+            </div>
+            <div class="showcase">
+                <div class="projectContainer" href="#aboutMe">
+                    <a href="#aboutMe">
+                        <h3>World 1 - UX design</h3>
+                        <p>Explore project that I have worked on to gain experiance in working with wireframes and UX design</p>    
+                    </a>   
+                </div>
+                
+                
+                <div class="projectContainer">
+                    <h3>World 2 - Internships</h3>
+                    <p>Explore project that I have worked on to gain real word experiance from internships</p>
+                    
+                </div>
+                <div class="projectContainer">
+                    <h3>World 3 - JavaScript Projects</h3>
+                    <p>Explore JavaScript progarms I have made </p>
+                    
+                </div>
+            </div>
+
+        </section>
+        <section id="resume" class="fade-in">
+            <div class="projectsTitle">
+                <h1>Resume</h1>
+                <p>Here are some of the jobs I have had:</p>
+            </div>
+            <div class="jobContainer">
+                <h2>Work Experience</h2>
+                <div class="jobSubContainer">
+                    <div class="job">
+                        <h5>October 2024 to June 2025</h5>
+                        <h3>Nebraska Furniture Mart - <em>Warehouse Supervisor II</em></h3>
+                        <ul>
+                            <li>Work with staff on completing tasks such as deliveries, pick-ups, receiving, UPS, supplies and floor replenishment.</li>
+                            <li>Answer phone calls to assist other departments based on their needs.</li>
+                            <li>Reply/send emails to staff/other deparmtnets to help assist with communication and procedures.</li>
+                            <li>Work with staff on projects and deadlines.</li>
+                            <li>Scheduling.</li>
+                            <li>Oversee outbound shipping processes such as UPS, FedEx, Postal Service and Ryder.</li>
+                            <li>Ensure that staff are following saftey procedures.</li>
+                             <li>Coach both staff and management on procedures and processes.</li>
+                             <li>Engage staff with difficult conversations to help improve themselves and the department.</li>
+                        </ul>
+                    </div>
+                    <div class="job">
+                        <h5>October 2023 to October 2024</h5>
+                        <h3>Nebraska Furniture Mart - <em>Warehouse Lead Mezzanine</em></h3>
+                        <ul>
+                            <li>Work with staff on completing tasks such as deliveries, pick-ups, receiving, UPS, supplies and floor replenishment.</li>
+                            <li>HIPO (high potential) candidate / involved in NFM Be A Leader classes.</li>
+                            <li>Participated in mock interviews.</li>
+                            <li>President's award nominee.</li>
+                            <li>Scheduling.</li>
+                            <li>Project lead on various process improvement plans.</li>
+                            <li>Trained staff on new and existing procedures.</li>
+                        </ul>
+                    </div>
+                    <div class="job">
+                        <h5>April 2018 to October 2023</h5>
+                        <h3>Nebraska Furniture Mart - <em>Customer Pick-Up Specialist</em></h3>
+                        <ul>
+                            <li>Worked with customers on loading and unloading product from/into their vehicles.</li>
+                            <li>Trained new hires on loading processes.</li>
+                            <li>Involved in confirming, building, loading, nationwide prep, and customer returns.</li>
+                            <li>Helped other departments when needed / learned other department procedures.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+             <div class="jobContainer">
+                <h2>Internships</h2>
+                <div class="jobSubContainer">
+                    <div class="job">
+                        <h5>March 2023 to June 2023</h5>
+                        <h3>Nebraska Furniture Mart - <em>IT Applications Software Development Intern</em></h3>
+                        <ul>
+                            <li>Learned the fundamentals of C#, SQL, and ASP.NET.</li>
+                            <li>Participated in daily scrum and bi-weekly developer meetings.</li>
+                            <li>Worked with test environment of Sales application (program that NFM sales team used on tablets to make/finalize sales).</li>
+                            <li>Work with staff on projects and deadlines.</li>
+                            <li>Scheduling.</li>
+                        </ul>
+                    </div>
+                    <div class="job">
+                        <h5>February 2023 to April 2023</h5>
+                        <h3>Childhood Cancer Society - <em>Web Development Team Intern</em></h3>
+                        <ul>
+                            <li>Worked on static web pages (HTML & CSS).</li>
+                            <li>Used Figma to design web layout.</li>
+                            <li>Collaborated with team members to design and build web pages.</li>
+                            <li>Participated in weekly meetings with graphic design and video production teams to collaborate in web design.</li>
+                        </ul>
+                    </div>
+                    <div class="job">
+                        <h5>May 2019 - July 2019</h5>
+                        <h3>Omaha Magazine - <em>Photography Assistant Intern</em></h3>
+                        <ul>
+                            <li>Worked with the head of photography to capture images.</li>
+                            <li>Traveled around town and engaged in conversations with customers.</li>
+                            <li>Edited videos and photos based on customer / photographer's needs.</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+             <div class="jobContainer">
+                <h2>Education</h2>
+                <div class="jobSubContainer">
+                    <div class="job">
+                        <h3>Metropolitan Community College - <em>Web Development Career Certificate (WDCCI)</em></h3>
+                        <p>Strong technical foundation in developing content for the World Wide Web and any internet-related support.</p>
+                        
+                    </div>
+                    <div class="job">
+                        <h3>Metropolitan Community College - <em>Web Programming Career Certificate (WPCII)</em></h3>
+                        <p>Entry-level programming focused on web application development and maintenance.</p>
+                    </div>
+                    <div class="job">
+                        <h3>Metropolitan Community College - <em>Associate in Applied Science (AASIT)</em></h3>
+                        <p>Currently studying the fundamentals of IT, HTML, CSS, Java, and JavaScript with a focus in Web Development.</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </section>
+        <section id="contact" class="fade-in">
+            <div class="projectsTitle">
+                <h1>Contact</h1>
+                <p>Here is where you can reach out to me :)</p>
+            </div> 
+            <div class="contactContainer">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+</div> 
         </section>
 
     </main>
@@ -49,7 +211,8 @@
     Your browser does not support audio.
     </audio>
 
+    <script src="scroll.js"></script>
+    <script src="resumeToggle.js"></script>
     <script src="musicScript.js"></script>
-    <script src="typewriter.js"></script>
 </body>
 </html>

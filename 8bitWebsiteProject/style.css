@@ -9,8 +9,7 @@ color: #33ff33;
 header{
     text-align: center;
     padding: 20px;
-    min-height: 100vh;
-    height: auto;
+    height: 100vh;
 }
 
 .startText {
@@ -19,6 +18,37 @@ header{
     white-space: pre-wrap;
     overflow: hidden;
 }
+
+.typewriter p {
+  overflow: hidden; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .15em; 
+  width: 0;
+  animation: typing 3.5s steps(40, end) forwards; /* forwards keeps final width */
+  position: relative;
+}
+
+/* Blinking period that appears after typing */
+.typewriter p::after {
+  content: "."; 
+  opacity: 0;
+  animation: blink-period 0.75s step-end infinite;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Blinking period effect */
+@keyframes blink-period {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+} 
 
 #pressStart{
     margin: 50px;
@@ -77,7 +107,8 @@ body {
 }
 
 .buttonSmall {
-    position: sticky;
+    position: fixed;
+    top: 20px;
     background: #ff004d;
     border: 4px solid #fff;
     color: #fff;
@@ -86,9 +117,10 @@ body {
     cursor: pointer;
     font-size: 1rem; /* relative font size */
     transition: transform 0.1s, background 0.2s;
-    display: inline-block;
+    display: block;
     text-align: center;
-    border-radius: 8px; /* optional: smoother look */
+    border-radius: 8px;
+    z-index: 1000;
 }
 
 /* Hover effect */
@@ -109,7 +141,7 @@ body {
     .buttonSmall {
         padding: 0.6rem 1rem;
         font-size: 0.8rem;
-        width: 100%; /* full-width button on very small screens */
+        width: 100%;
     }
 }
 
@@ -125,31 +157,28 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
+    width: 100%; 
+    padding-top: 10%; 
 }
 
 #aboutMeContainer {
     width: 800px;
+    margin: auto;
     max-width: 90%;
     background-color: rgba(255, 255, 255, 0.95);
     color: #1d1d1d;
     border-radius: 25px;
     padding: 40px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 200px;
     font-family: 'Press Start 2P', cursive;
     line-height: 1.6;
-    text-align: justify;
 }
 
-/* Optional: headings inside the container */
 #aboutMeContainer h1 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #ff004d; /* accent color to match your buttons */
+    color: #ff004d;
     text-align: center;
 }
 #aboutMeContainer p {
@@ -157,8 +186,248 @@ body {
     margin-bottom: 15px;
 }
 
-.typewriter {
-    white-space: pre-wrap;
-    overflow: hidden;
+.levelControls {
+      display: flex;
+  margin: 20px auto 0; /* centers like #aboutMeContainer */
+  justify-content: space-around;
+  width: 800px;
+  max-width: 90%;
+}
+
+.next, .back{
     display: inline-block;
+  background: #ff004d;
+  border: 4px solid #fff;
+  color: #fff;
+  padding: 15px 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.1s;
+  animation: float 2s ease-in-out infinite;
+}
+
+.next:hover, .back:hover {
+  transform: scale(1.1);
+  background: #ff77a8;
+}
+
+#projects {
+    background-image: url('sprite/ocean.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%; 
+}
+
+.projectsTitle {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #1d1d1d;
+    color: #ff004d;
+    position: relative;
+    margin-top: 40px;
+    height: 150px;
+}
+
+.projectsTitle h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ff004d;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 0.8s forwards 0.2s;
+}
+
+.projectsTitle p {
+    font-size: 16px;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 0.8s forwards 0.4s;
+}
+
+/* Keyframes for fade & slide */
+@keyframes fadeSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.showcase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1800px;
+    margin: auto;
+}
+
+.projectContainer {
+    position: relative;
+    width: 475px;
+    height: 150px;
+    margin: 20px auto;
+    max-width: 90%;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #1d1d1d;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    font-family: 'Press Start 2P', cursive;
+    overflow: hidden;
+    transition: background-color 0.6s ease, color 0.6s ease; /* smooth background & text transitions */
+}
+
+.projectContainer h3 {
+    font-size: 20px;
+    color: #ff004d;
+    transition: color 0.6s ease;
+}
+
+.projectContainer p {
+    font-size: 14px;
+    margin-top: 20px;
+    line-height: 1.4;
+    transition: color 0.6s ease;
+}
+
+.projectContainer:hover {
+    background-color: #1d1d1d;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.projectContainer:hover h3 {
+    color: #00ffea;
+}
+
+.projectContainer:hover p {
+    color: #f0ff00;
+}
+
+
+
+#resume {
+    background-image: url('sprite/goldenCloud.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%; 
+}
+    
+.jobContainer {
+  width: 80%;
+  max-width: 90%;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #00ffea;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  font-family: 'Press Start 2P', cursive;
+  line-height: 1.6;
+
+
+}
+
+.jobContainer :hover {
+  cursor: pointer;
+}
+
+.jobSubContainer {
+  margin-top: 10px;
+  display: none;
+}
+
+.jobSubContainer h5 {
+  font-size: 14px;
+  color: #ff004d;
+}
+
+.job{
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #00ffea;
+}
+
+
+
+
+
+#contact {
+    background-image: url('sprite/city.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%; 
+}
+
+.contactContainer {
+    width: 800px;
+    margin: 200px auto;
+    max-width: 90%;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #1d1d1d;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.6;
+}
+
+.contactContainer h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ff004d;
+    text-align: center;
+}
+
+#contactForm label {
+    display: block;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #1d1d1d;
+    border-radius: 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    color: #1d1d1d;
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+#contactForm textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+#contactForm button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    border: 2px solid #ff004d;
+    background-color: #ffffff;
+    color: #ff004d;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#contactForm button:hover {
+    background-color: #ff004d;
+    color: #ffffff;
 }
