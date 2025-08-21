@@ -159,20 +159,22 @@ body {
     background-position: center;
     min-height: 100vh;
     width: 100%; 
-    padding-top: 10%; 
+    padding-bottom: 40px;
+    scroll-margin-top: 50px;    
 }
 
 #aboutMeContainer {
     width: 800px;
-    margin: auto;
+    margin: 100px auto;
     max-width: 80%;
-    background-color: rgba(255, 255, 255, 0.95);
-    color: #1d1d1d;
-    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #00ffea;
+    border-radius: 20px;
     padding: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
     font-family: 'Press Start 2P', cursive;
     line-height: 1.6;
+    
 }
 
 #aboutMeContainer h1 {
@@ -181,14 +183,30 @@ body {
     color: #ff004d;
     text-align: center;
 }
+
 #aboutMeContainer p {
     font-size: 14px;
     margin-bottom: 15px;
+    color: #00ffea;
+}
+
+.Slides {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.2s;
+}
+
+@keyframes fade {
+  from {opacity: .01}
+  to {opacity: 1}
 }
 
 .levelControls {
       display: flex;
-  margin: 20px auto 0; /* centers like #aboutMeContainer */
+  margin: 20px auto 0;
   justify-content: space-around;
   width: 800px;
   max-width: 90%;
@@ -218,7 +236,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     min-height: 100vh;
-    width: 100%; 
+    width: 100%;
+    padding-bottom: 40px; 
 }
 
 .projectsTitle {
@@ -259,7 +278,7 @@ body {
 .showcase {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px;
     max-width: 1800px;
     margin: auto;
@@ -271,14 +290,15 @@ body {
     height: 150px;
     margin: 20px auto;
     max-width: 90%;
-    background-color: rgba(255, 255, 255, 0.95);
-    color: #1d1d1d;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #00ffea;
     border-radius: 25px;
     padding: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
     font-family: 'Press Start 2P', cursive;
+    text-decoration: none;
     overflow: hidden;
-    transition: background-color 0.6s ease, color 0.6s ease; /* smooth background & text transitions */
+    transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 .projectContainer h3 {
@@ -291,21 +311,22 @@ body {
     font-size: 14px;
     margin-top: 20px;
     line-height: 1.4;
+    color: #00ffea;
     transition: color 0.6s ease;
 }
 
 .projectContainer:hover {
-    background-color: #1d1d1d;
-    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #1d1d1d; /* dark text */
     cursor: pointer;
 }
 
 .projectContainer:hover h3 {
-    color: #00ffea;
+    color: #ff004d;
 }
 
 .projectContainer:hover p {
-    color: #f0ff00;
+    color: #1d1d1d;
 }
 
 
@@ -317,11 +338,12 @@ body {
     background-position: center;
     min-height: 100vh;
     width: 100%; 
+    padding-bottom: 40px;
 }
     
 .jobContainer {
   width: 80%;
-  max-width: 90%;
+  max-width: 1800px;
   margin: 50px auto;
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.9);
@@ -343,9 +365,13 @@ body {
   display: none;
 }
 
+.jobSubContainer h3{
+    color: #ff004d;
+}
+
 .jobSubContainer h5 {
   font-size: 14px;
-  color: #ff004d;
+  color: #ff33cc
 }
 
 .job{
@@ -353,9 +379,36 @@ body {
     padding: 10px;
     border-bottom: 1px solid #00ffea;
 }
+@keyframes floatArrow {
+  0%, 100% {
+    transform: translateY(0) rotate(90deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(90deg);
+  }
+}
 
+.rotateArrow{
+    position: relative;
+    transform: rotate(90deg);
+    float: right;
+    right: 25px;
+    animation: floatArrow 2s ease-in-out infinite;
+    transition: transform 0.4s ease;
+}
 
+.rotateArrow.active {
+  animation: floatArrowRotate 2s ease-in-out infinite;
+}
 
+@keyframes floatArrowRotate {
+  0%, 100% {
+    transform: translateY(0) rotate(270deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(270deg);
+  }
+}
 
 
 #contact {
@@ -365,6 +418,7 @@ body {
     background-position: center;
     min-height: 100vh;
     width: 100%; 
+    padding-bottom: 40px;
 }
 
 .contactContainer {

@@ -11,3 +11,10 @@ jobs.forEach(job => {
         }
     });
 });
+
+document.querySelectorAll('.jobContainer').forEach(container => {
+  container.addEventListener('click', () => {
+    const arrow = container.querySelector('.rotateArrow');
+    arrow.classList.toggle('active');
+  });
+});
