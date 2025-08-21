@@ -4,16 +4,23 @@
 }
 html{
 color: #33ff33;
+scroll-behavior: smooth;
 }
 
-header{
+#introScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
     padding: 20px;
-    height: 100vh;
+    min-height: 100vh;
+    scroll-margin-top: 40px;
 }
 
 .startText {
-    font-family: 'Press Start 2P', cursive;
     font-size: 14px;
     white-space: pre-wrap;
     overflow: hidden;
@@ -66,7 +73,6 @@ body {
 
 /* Fake CRT scanlines */
 .crt {
-    font-family: 'Press Start 2P', cursive;
     padding: 20px;
 }
 .crt::after {
@@ -78,6 +84,103 @@ body {
   bottom: 0;
   background: repeating-linear-gradient(rgba(0,0,0,0.2) 0px, rgba(0,0,0,0.2) 2px, transparent 2px, transparent 4px);
   pointer-events: none;
+}
+
+#bigNav {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 1000;
+  background-color: #1d1d1d;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  padding: 10px 15px;
+}
+
+#bigNav h4{
+  font-size: 26px;
+}
+
+/* Hover effect for the menu container */
+#bigNav:hover {
+  cursor: pointer;
+}
+
+/* Menu panel (hidden by default) */
+.menuPannel {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  min-width: 180px;
+}
+
+/* Show active panel */
+.activePannel {
+  display: block;
+  opacity: 1;
+  text-align: left;
+}
+
+/* Individual menu items */
+.menuPannel a {
+  display: block;
+  padding: 8px 12px;
+  color: #1d1d1d;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.menuPannel a:hover {
+  background-color: #1d1d1d;
+  color: #ffffff;
+
+}
+
+.menuPannel ul{
+  list-style-type: none;
+}
+
+/* Container for toggle settings */
+#toggleSetting {
+  margin-top: 10px;
+  padding-top: 10px;
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Each toggle item */
+#toggleSetting li {
+  margin: 8px 0;
+}
+
+/* Toggle buttons */
+#toggleSetting button {
+  width: 100%;
+  background-color: #f5f5f5;
+  border: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+/* Hover effect */
+#toggleSetting button:hover {
+  background-color: #1d1d1d;
+  color: #fff;
+  transform: translateX(3px);
+}
+
+/* Active/pressed style */
+#toggleSetting button:active {
+  transform: translateX(1px) scale(0.98);
 }
 
 /* Button */
@@ -106,51 +209,6 @@ body {
   100% { transform: translateY(0); }
 }
 
-.buttonSmall {
-    position: fixed;
-    top: 20px;
-    background: #ff004d;
-    border: 4px solid #fff;
-    color: #fff;
-    padding: 1rem 2rem;
-    margin-top: 20px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: transform 0.1s, background 0.2s;
-    display: block;
-    text-align: center;
-    border-radius: 8px;
-    z-index: 1000;
-}
-
-/* Hover effect */
-.buttonSmall:hover {
-    transform: scale(1.1);
-    background: #ff77a8;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .buttonSmall {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .buttonSmall {
-        padding: 0.6rem 1rem;
-        font-size: 0.8rem;
-        width: 100%;
-    }
-}
-
-.music-controls{
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 20px;
-}
-
 /*About me*/
 #aboutMe {
     background-image: url('sprite/origbig.png');
@@ -160,7 +218,7 @@ body {
     min-height: 100vh;
     width: 100%; 
     padding-bottom: 40px;
-    scroll-margin-top: 50px;    
+    scroll-margin-top: 40px;    
 }
 
 #aboutMeContainer {
@@ -172,7 +230,6 @@ body {
     border-radius: 20px;
     padding: 40px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-    font-family: 'Press Start 2P', cursive;
     line-height: 1.6;
     
 }
@@ -238,11 +295,11 @@ body {
     min-height: 100vh;
     width: 100%;
     padding-bottom: 40px; 
+    scroll-margin-top: 40px;
 }
 
 .projectsTitle {
     text-align: center;
-    font-family: 'Press Start 2P', cursive;
     background-color: #1d1d1d;
     color: #ff004d;
     position: relative;
@@ -295,7 +352,6 @@ body {
     border-radius: 25px;
     padding: 40px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-    font-family: 'Press Start 2P', cursive;
     text-decoration: none;
     overflow: hidden;
     transition: background-color 0.6s ease, color 0.6s ease;
@@ -317,7 +373,7 @@ body {
 
 .projectContainer:hover {
     background-color: rgba(255, 255, 255, 0.95);
-    color: #1d1d1d; /* dark text */
+    color: #1d1d1d;
     cursor: pointer;
 }
 
@@ -339,6 +395,7 @@ body {
     min-height: 100vh;
     width: 100%; 
     padding-bottom: 40px;
+    scroll-margin-top: 40px;
 }
     
 .jobContainer {
@@ -350,7 +407,6 @@ body {
   color: #00ffea;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-  font-family: 'Press Start 2P', cursive;
   line-height: 1.6;
 
 
@@ -419,6 +475,7 @@ body {
     min-height: 100vh;
     width: 100%; 
     padding-bottom: 40px;
+    scroll-margin-top: 40px;
 }
 
 .contactContainer {
@@ -430,7 +487,6 @@ body {
     border-radius: 25px;
     padding: 40px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    font-family: 'Press Start 2P', cursive;
     line-height: 1.6;
 }
 
@@ -454,7 +510,6 @@ body {
     padding: 10px;
     border: 2px solid #1d1d1d;
     border-radius: 10px;
-    font-family: 'Press Start 2P', cursive;
     font-size: 14px;
     color: #1d1d1d;
     background-color: #ffffff;
@@ -474,7 +529,6 @@ body {
     border: 2px solid #ff004d;
     background-color: #ffffff;
     color: #ff004d;
-    font-family: 'Press Start 2P', cursive;
     font-size: 14px;
     cursor: pointer;
     border-radius: 10px;

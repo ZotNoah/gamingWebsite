@@ -18,3 +18,14 @@ document.querySelectorAll('.jobContainer').forEach(container => {
     arrow.classList.toggle('active');
   });
 });
+
+const menuItems = document.getElementsByClassName('menuPannel')[0];
+const menubutton = document.getElementById('bigNav');
+
+function dropdownMenu(event){
+  menuItems.classList.toggle('activePannel');
+  event.stopPropagation();
+}
+
+
+menubutton.addEventListener('click',dropdownMenu);
