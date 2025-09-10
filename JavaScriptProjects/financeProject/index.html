@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Finance Projcet</h1>
+        
+    </header>
+    <main>
+        <h2>Finance calculator</h2>
+        <div id="userInput">
+            <label for="principal">Principal: </label>
+            <input type="text" id="principal" name="Principal"><br>
+        </div>
+        <div id="userInput">
+            <label for="downPayment">Down payment: </label>
+            <input type="text" id="downPayment" name="Down Payment"><br>
+        </div>
+        <div id="userInput">
+            <label for="loanTerm">Loan Term in Months:</label>
+            <input type="text" id="loanTerm" name="Loan Term"  min="0" max="99" oninput="this.value = this.value.slice(0, 2)"><br> 
+        </div>
+        <div id="userInput">
+            <label for="interestRate">Interest Rate: </label>
+            <input type="text" id="interestRate" name="Interest Rate"><br>
+        </div>
+        <button type="submit" onclick="financeCalculator()">Enter</button>
+        
+    </main>
+    <footer>
+        <p id="statement"></p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

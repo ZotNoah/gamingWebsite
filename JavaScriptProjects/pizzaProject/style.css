@@ -1,0 +1,110 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+  background-color: #fff5f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h3 {
+  color: #d9480f;
+  margin-bottom: 1rem;
+}
+
+p, label {
+  color: #444;
+}
+
+.text-center {
+  max-width: 800px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  max-width: 800px; 
+  margin: auto;
+  padding: 2rem;
+  background-color: #fff8f2;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+#pizzaTable {
+  width: 100%;
+  margin: 0px auto;
+  border-collapse: collapse;
+  background-color: #fffefc;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+#pizzaTable th {
+  background-color: #d9480f;
+  color: white;
+  padding: 12px;
+  text-transform: uppercase;
+}
+
+#pizzaTable td {
+  padding: 12px;
+  border-bottom: 1px solid #f0d9c0;
+}
+
+#pizzaTable tr:nth-child(even) {
+  background-color: #fff2eb;
+}
+
+.pizzaIngredientes {
+  background-color: #fff8f2;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  margin-top: 2rem;
+  margin: auto;
+  width: 90%;
+}
+
+.form-check-input:checked {
+  background-color: #d9480f;
+  border-color: #d9480f;
+}
+
+.form-check-label {
+  text-align: left;
+  color: #444;
+}
+
+button {
+  min-width: 120px;
+  background-color: #f0802c;
+  border-color: #f0802c;
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #d9480f;
+}
+
+#orderComplete {
+  margin: 20px auto 0 auto;
+  max-width: 400px;
+  padding: 15px;
+  text-align: left;
+  background-color: #ffe6d9; 
+  border: 1px solid #f0b68c;
+  border-radius: 8px;
+  color: #d9480f;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+

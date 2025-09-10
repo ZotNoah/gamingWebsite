@@ -59,11 +59,12 @@ scroll-behavior: smooth;
 
 #pressStart{
     margin: 50px;
-    
 }
 
-#pressStart button{
+#pressStart a{
     margin: 50px;
+    text-decoration: none;
+
 }
 /* General look */
 body {  
@@ -328,7 +329,7 @@ body {
     min-height: 90vh;
     width: 100%;
     padding-bottom: 40px; 
-    scroll-margin-top: 40px;
+    scroll-margin-top: 100px;
 }
 
 .projectsTitle {
@@ -421,12 +422,14 @@ body {
 /*levels / project showcase*/
 .level{
   display: flex;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.9); 
   align-items: center;
 }
 
 .levelInfo{
   margin: 0px 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .levelInfo h2{
@@ -435,7 +438,7 @@ body {
 }
 
 .levelInfo p{
-  color: #000;
+  color: #00ffea;
   line-height: 25px;
 }
 
@@ -444,12 +447,12 @@ body {
 }
 
 .level:hover {
-  background-color: rgba(0, 0, 0, 0.9); 
+  background-color: #fff; 
   transition: background-color 0.3s ease; /* smooth animation */
 }
 
 .level:hover p{
-  color: #00ffea;
+  color: #000;
 }
 
 
@@ -462,7 +465,7 @@ body {
     min-height: 90vh;
     width: 100%; 
     padding-bottom: 40px;
-    scroll-margin-top: 40px;
+    scroll-margin-top: 100px;
 }
     
 .jobContainer {
@@ -542,7 +545,7 @@ body {
     min-height: 90vh;
     width: 100%; 
     padding-bottom: 40px;
-    scroll-margin-top: 40px;
+    scroll-margin-top: 100px;
 }
 
 .contactContainer {
@@ -620,15 +623,52 @@ body {
     display: none;
   }
 
-  #aboutMeContainer{
-    min-height: 200px;
-    overflow: scroll;
+  #welcomeTitle{
+    font-size: 20px;
+  }
+
+  .startText{
+    font-size: 12px;
+  }
+
+  /*About Me Mobile*/
+  .projectsTitle h1{
+    font-size: 28px;
+  }
+
+  .projectsTitle p{
+    font-size: 16px;
+  }
+
+
+  #aboutMeContainer p{
+    font-size: 12px;
+  }
+
+
+  /*Resume Mobile*/
+  .jobContainer h2{
+    font-size: 20px;
   }
 
   .jobSubContainer {
   max-height: 600px;
   overflow: scroll;
   }
+
+  .jobSubContainer h5{
+    font-size: 12px;
+  }
+
+  .jobSubContainer h3{
+    font-size: 16px;
+  }
+
+  .jobSubContainer li{
+    font-size: 13px;
+  }
+
+
 
 
 

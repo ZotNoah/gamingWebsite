@@ -17,6 +17,6 @@ function scrollToNext(button) {
 const backButton = document.getElementById("backButton");
 const nextButton = document.getElementById("nextButton");
 
-backButton.addEventListener("click", () => scrollToBack(backButton));
-nextButton.addEventListener("click", () => scrollToNext(nextButton));
+//backButton.addEventListener("click", () => scrollToBack(backButton));
+//nextButton.addEventListener("click", () => scrollToNext(nextButton));
 

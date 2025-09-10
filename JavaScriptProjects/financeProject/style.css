@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    width: 460px;
+    margin: 10px auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+h1{
+    text-align: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+#userInput{
+  display: flex;
+  align-items: center;
+  
+}
+
+label {
+  width: 200px;
+  text-align: left;
+}
+
+input {
+  width: 200px;
+  padding: 5px;
+}

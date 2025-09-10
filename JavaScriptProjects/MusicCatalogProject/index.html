@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Music Catalog Project</h1>
+    <h2>Welcome to the your personal music catalog!</h2>
+    <h2>All you need to do is enter the information about your music collection!</h2>
+    <h3>Please enter each song that you have :)</h3>
+    <div class="container">
+        <form id="songForm">
+            <label for="title">Song Title</label>
+            <input type="text" id="title" for="title" required><br>
+            <label for="artist">Artist</label>
+            <input type="text" id="artist" for="artist" required><br>
+            <label for="album">Album</label>
+            <input type="text" id="album" for="album" required><br>
+            <label for="year">Year</label>
+            <input  type="text" id="year" name="year" pattern="^\d{4}$" minlength="4" maxlength="4" required><br>
+            <button type="submit" id="songSubmit">Submit</button>
+        </form>
+        
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>Title</td>
+                <td>Artist</td>
+                <td>Album</td>
+                <td>year</td>
+            </tr>
+        </thead>
+        <tbody id="displaySong">
+
+        </tbody>
+        
+        
+    </table>
+<script src="music.js"></script>    
+</body>
+</html>

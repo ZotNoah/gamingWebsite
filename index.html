@@ -35,7 +35,7 @@
 
     <main>
         <section id="introScreen" class="fade-in">
-            <h1>WELCOME TO MY 8-BIT SITE</h1>
+            <h1 id="welcomeTitle">WELCOME TO MY 8-BIT SITE</h1>
             <div id="pressStart" class="typewriter">
                 <p class="startText">Press Start to continue..</p>
                 <a href="#aboutMe" id="startButton" class="button">▶ START</a>
@@ -91,7 +91,7 @@
            
             <div class="levelControls">
                 <button class="back" onclick="plusSlides(-1)">&#128896; BACK</button>
-                <button class="next" onclick="plusSlides(1)">NEXT &#128898;</button>
+                <button class="next" onclick="plusSlides(1)">NEXT ▶;</button>
             </div>
             
 
@@ -109,13 +109,13 @@
                         <p>Explore project that I have worked on to gain experiance in working with wireframes and UX design</p>                         
                     </div>
                 </a>
-                <a href="uxdeign.html" class="projectContainer">
+                <a href="internship.html" class="projectContainer">
                     <div class="worldInfo">
                         <h3>World 2 - Internships</h3>
                         <p>Explore project that I have worked on to gain real word experiance from internships</p>                         
                     </div>
                 </a>
-                <a href="uxdeign.html" class="projectContainer">
+                <a href="JavaScriptProjects.html" class="projectContainer">
                     <div >
                         <h3>World 3 - JavaScript Projects</h3>
                         <p>Explore JavaScript programs I have made </p>                       
@@ -236,7 +236,8 @@
             </div> 
             <div class="contactContainer">
                 <h2>Contact Me</h2>
-                <form id="contactForm">
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="2cc17d68-6271-4ce0-8d94-214f389c574b">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Your Name" required>
 
