@@ -1,14 +1,3 @@
-const startButton = document.getElementById('startButton');
-
-function scrollToAboutMe(){
-    const aboutMeSection = document.getElementById('aboutMe');
-    if (aboutMeSection) {
-        aboutMeSection.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-
-startButton.addEventListener('click', scrollToAboutMe);
-
 function scrollToBack(button) {
   const currentSection = button.closest("section");
   const prevSection = currentSection.previousElementSibling;

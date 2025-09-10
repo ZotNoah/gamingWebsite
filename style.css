@@ -95,6 +95,7 @@ body {
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   padding: 10px 15px;
+  display: none;
 }
 
 #bigNav h4{
@@ -209,20 +210,52 @@ body {
   100% { transform: translateY(0); }
 }
 
+.homeNav{
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+
+}
+
+.homeNav ul{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 30px 0px;
+  background-color: #1d1d1d;
+}
+
+.homeNav li{
+  display: inline-block;
+  margin: 0px 50px;
+  font-size: 25px;
+} 
+
+.homeNav a{
+  color: #33ff33;
+  text-decoration: none;
+}
+
+.homeNav a:hover{
+  color: #ffffff;
+}
+
 /*About me*/
 #aboutMe {
     background-image: url('sprite/origbig.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 100vh;
+    min-height: 90vh;
     width: 100%; 
     padding-bottom: 40px;
-    scroll-margin-top: 40px;    
+    scroll-margin-top: 100px;    
 }
 
 #aboutMeContainer {
     width: 800px;
+    min-height: 650px;
     margin: 100px auto;
     max-width: 80%;
     background-color: rgba(0, 0, 0, 0.9);
@@ -292,7 +325,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 100vh;
+    min-height: 90vh;
     width: 100%;
     padding-bottom: 40px; 
     scroll-margin-top: 40px;
@@ -341,12 +374,13 @@ body {
     margin: auto;
 }
 
+
 .projectContainer {
     position: relative;
     width: 475px;
-    height: 150px;
+    min-height: 150px;
     margin: 20px auto;
-    max-width: 90%;
+    max-width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     color: #00ffea;
     border-radius: 25px;
@@ -384,15 +418,48 @@ body {
 .projectContainer:hover p {
     color: #1d1d1d;
 }
+/*levels / project showcase*/
+.level{
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+}
+
+.levelInfo{
+  margin: 0px 20px;
+}
+
+.levelInfo h2{
+  color: #ff004d;
+  margin-bottom: 5px;
+}
+
+.levelInfo p{
+  color: #000;
+  line-height: 25px;
+}
+
+.levelContainer{
+  text-decoration: none;
+}
+
+.level:hover {
+  background-color: rgba(0, 0, 0, 0.9); 
+  transition: background-color 0.3s ease; /* smooth animation */
+}
+
+.level:hover p{
+  color: #00ffea;
+}
 
 
-
+/*Resume CSS*/
 #resume {
     background-image: url('sprite/goldenCloud.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 100vh;
+    min-height: 90vh;
     width: 100%; 
     padding-bottom: 40px;
     scroll-margin-top: 40px;
@@ -472,7 +539,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 100vh;
+    min-height: 90vh;
     width: 100%; 
     padding-bottom: 40px;
     scroll-margin-top: 40px;
@@ -538,4 +605,33 @@ body {
 #contactForm button:hover {
     background-color: #ff004d;
     color: #ffffff;
+}
+
+/*CSS for Mobile*/
+@media screen and (max-width: 600px) {
+
+
+
+  #bigNav{
+    display: block;
+  }
+
+  .homeNav{
+    display: none;
+  }
+
+  #aboutMeContainer{
+    min-height: 200px;
+    overflow: scroll;
+  }
+
+  .jobSubContainer {
+  max-height: 600px;
+  overflow: scroll;
+  }
+
+
+
+
+
 }
