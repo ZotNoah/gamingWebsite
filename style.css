@@ -282,7 +282,7 @@ body {
 }
 
 .levelControls {
-      display: flex;
+  display: none;
   margin: 20px auto 0;
   justify-content: space-around;
   width: 800px;
