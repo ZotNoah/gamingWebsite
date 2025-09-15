@@ -441,15 +441,6 @@ body {
   color: #000;
 }
 
-.backButton{
-  position: absolute;
-  color: #33ff33;
-  float: left;
-  z-index: 5;
-  font-size: 20px;
-  right: 100px;
-  top: 20px;
-}
 /*Resume CSS*/
 #resume {
     background-image: url('sprite/goldenCloud.png');
