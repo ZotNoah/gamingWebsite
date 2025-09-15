@@ -13,11 +13,11 @@
             <h4>Menu</h4>
             <nav class="menuPannel">
                 <ul>
-                    <li><a href="index.html/#introScreen">Home</a></li>
-                    <li><a href="#aboutMe">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html#introScreen">Home</a></li>
+                    <li><a href="index.html#aboutMe">About Me</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#resume">Resume</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
                     <br><hr>
                     <div id="toggleSetting">
                         <li><button id="music-toggle">🔊 Music</button></li>
@@ -29,13 +29,14 @@
         </div>
     <section id="projects" class="fade-in">
             <div class="projectsTitle">
+                <a href="index.html#projects" class="backButton">Projects</a>
                 <h1>UX Design</h1>
                 <p>Here are some of the UX design projects I have worked on:</p>
             </div>
             <div class="showcase">
                 <a href="https://www.figma.com/design/UmOhSk8L7FB0bXhug5jGLU/Concert-Discovery?node-id=0-1&p=f" target="_blank" class="levelContainer">
                     <div class="level">
-                        <img src="images/FigmaConcertApp.PNG" width="275px" height="275px">
+                        <img src="images/FigmaConcertApp.PNG" width="250px" height="250px">
                         <div class="levelInfo">
                             <h2>Level 1 - Figma Concert Discovery App</h2>
                             <p>A work-in-progress wireframe created in Figma to explore layout and navigation flow for a concert discovery app.</p> 
@@ -44,7 +45,7 @@
                 </a><br>
                 <a href="uxFiles/Issues of missing out on concerts.pptx" class="levelContainer">
                     <div class="level">
-                        <img src="sprite/goldenCloud.png" width="275px" height="275px">
+                        <img src="images/ResearchReport.PNG" width="250px" height="250px">
                         <div class="levelInfo">
                             <h2>Level 2 - Research Report for Concert App</h2>
                             <p>A research study exploring how concert-goers discover and attend live shows, uncovering challenges and opportunities that informed the design of a community-focused concert discovery app</p><br> 
@@ -54,7 +55,7 @@
                 </a><br>
                 <a href="uxFiles/Interview Questions.pdf" class="levelContainer">
                     <div class="level">
-                        <img src="sprite/goldenCloud.png" width="275px" height="275px">
+                        <img src="images/InterviewQuestions.PNG" width="250px" height="250px">
                         <div class="levelInfo">
                             <h2>Level 3 - Research Interview Question</h2>
                             <p>A semi-structured interview guide created to examine user behaviors, challenges, and motivations around concert discovery and attendance for the concert discovery app.</p><br>
@@ -66,6 +67,13 @@
             </div>
 
         </section>
+    <audio id="bg-music" loop>
+    <source src="music/Juhani Junkala [Chiptune Adventures] 1. Stage 1.ogg" type="audio/mpeg">
+    Your browser does not support audio.
+    </audio>
+
+    <script src="scroll.js"></script>
+    <script src="resumeToggle.js"></script>
     <script src="musicScript.js"></script>
 </body>
 </html>

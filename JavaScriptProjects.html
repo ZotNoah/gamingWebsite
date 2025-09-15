@@ -13,11 +13,11 @@
             <h4>Menu</h4>
             <nav class="menuPannel">
                 <ul>
-                    <li><a href="index.html/#introScreen">Home</a></li>
-                    <li><a href="#aboutMe">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html#introScreen">Home</a></li>
+                    <li><a href="index.html#aboutMe">About Me</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#resume">Resume</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
                     <br><hr>
                     <div id="toggleSetting">
                         <li><button id="music-toggle">🔊 Music</button></li>
@@ -29,13 +29,14 @@
         </div>
     <section id="projects" class="fade-in">
             <div class="projectsTitle">
+                <a href="index.html#projects" class="backButton">Projects</a>
                 <h1>JavaScript Projects</h1>
                 <p>Here you can explore JavaScript programs I have made</p>
             </div>
             <div class="showcase">
                 <a href="JavaScriptProjects/calculatorProject/index.html" target="_blank" class="levelContainer">
                     <div class="level">
-                        <img src="sprite/goldenCloud.png" width="275px" height="275px">
+                        <img src="images/Calculator.PNG" width="250px" height="250px">
                         <div class="levelInfo">
                             <h2>Level 1 - Calculator App</h2>
                             <p>A simple calculator app built to perform basic arithmetic operations with a clean and user-friendly interface.</p><br> 
@@ -44,7 +45,7 @@
                 </a><br>
                 <a href="JavaScriptProjects/financeProject/index.html" target="_blank" class="levelContainer">
                     <div class="level">
-                        <img src="sprite/goldenCloud.png" width="275px" height="275px">
+                        <img src="images/FinanceCalculator.PNG" width="250px" height="250px">
                         <div class="levelInfo">
                             <h2>Level 2 - Finance Calculator</h2>
                             <p>A simple finance calculator app that helps users estimate loans, interest, and payments through an easy-to-use interface.</p><br> 
@@ -53,7 +54,7 @@
                 </a><br>
                 <a href="JavaScriptProjects/MusicCatalogProject/index.html" target="_blank" class="levelContainer">
                     <div class="level">
-                        <img src="images/MusicCatalog.PNG" width="275px" height="275px">
+                        <img src="images/MusicCatalog.PNG" width="250px" height="250px">
                         <div class="levelInfo">
                             <h2>Level 3 - Music Cataloge Project</h2>
                             <p>A personal music library app demonstrating object-oriented programming and interactive DOM manipulation.</p><br> 
@@ -62,7 +63,7 @@
                 </a><br>
                 <a href="JavaScriptProjects/pizzaProject/index.html" target="_blank" class="levelContainer">
                     <div class="level">
-                        <img src="images/PizzaProject.PNG" width="275px" height="275px">
+                        <img src="images/PizzaProject.PNG" width="250px" height="250px">
                         <div class="levelInfo">
                             <h2>Level 4 - Bootstrap Pizza Project</h2>
                             <p>An interactive web app for customizing pizzas, featuring dynamic JavaScript, Bootstrap styling, form handling, and live DOM updates.</p><br> 
@@ -75,6 +76,13 @@
             </div>
 
         </section>
+    <audio id="bg-music" loop>
+    <source src="music/Juhani Junkala [Chiptune Adventures] 1. Stage 1.ogg" type="audio/mpeg">
+    Your browser does not support audio.
+    </audio>
+
+    <script src="scroll.js"></script>
+    <script src="resumeToggle.js"></script>
     <script src="musicScript.js"></script>
 </body>
 </html>

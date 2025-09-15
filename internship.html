@@ -13,11 +13,11 @@
             <h4>Menu</h4>
             <nav class="menuPannel">
                 <ul>
-                    <li><a href="index.html/#introScreen">Home</a></li>
-                    <li><a href="#aboutMe">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html#introScreen">Home</a></li>
+                    <li><a href="index.html#aboutMe">About Me</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#resume">Resume</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
                     <br><hr>
                     <div id="toggleSetting">
                         <li><button id="music-toggle">🔊 Music</button></li>
@@ -29,13 +29,14 @@
         </div>
     <section id="projects" class="fade-in">
             <div class="projectsTitle">
+                <a href="index.html#projects" class="backButton">Projects</a>
                 <h1>Interships</h1>
                 <p>Here you can view real world projects I have worked on</p>
             </div>
             <div class="showcase">
                 <a href="internshipFiles/AdventureTedScholarship.pdf" target="_blank" class="levelContainer">
                     <div class="level">
-                        <img src="images/internshipFigma.PNG" width="275px" height="275px">
+                        <img src="images/internshipFigma.PNG" width="250px" height="250px">
                         <div class="levelInfo">
                             <h2>Level 1 - Childhood Cancer Society</h2>
                             <p>Collaborated with developers and cross-department teams to design a wireframe for a real-world website project</p><br>
@@ -47,6 +48,13 @@
             </div>
 
         </section>
+    <audio id="bg-music" loop>
+    <source src="music/Juhani Junkala [Chiptune Adventures] 1. Stage 1.ogg" type="audio/mpeg">
+    Your browser does not support audio.
+    </audio>
+
+    <script src="scroll.js"></script>
+    <script src="resumeToggle.js"></script>
     <script src="musicScript.js"></script>
 </body>
 </html>
