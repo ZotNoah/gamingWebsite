@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Scrambler</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Word Scrambler</h1>
+        <h2>How to Play:</h2>
+        <ul>
+            <li>The computer will pick a random word and mix the letters around</li>
+            <li>Guess what the word is by typing it in and submitting</li>
+            <li>Words that are 4 letters long are 1 point</li>
+            <li>Words that are 5 letters long are 3 points</li>
+            <li>Words that are 7 letters long are 5 points</li>
+        </ul>
+
+    </header>
+    <main>
+        <h1>Guess the word!!!</h1>
+        <h2 id="scrambledWord">Scrambled word goes here</h2>
+        <p id="answer"></p>
+        <input type="text" id="userInput" name="userInput">
+        <div class="button-group">
+            <button id="submit">Submit</button>
+            <button id="nextWord">Next Word</button>
+        </div>
+        <div class="reset-group">
+            <button id="reset">Reset</button>
+        </div>
+        <p id="highScoreDisplay">High Score: 0</p>
+        <p>User Points: <span id="userPoints">0</span></p>
+        <p>Attempts Left: <span id="attempts">3</span></p>
+    </main>
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
