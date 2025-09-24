@@ -133,6 +133,12 @@ function nextWord(){
     console.log(`The new word is: ${guessWord}`);
 }
 
+userInput.addEventListener("keyup", (event) => {
+    if(event.key === "Enter") {
+        event.preventDefault();
+        submitButton.click();
+    }
+});
 
 submitButton.addEventListener("click", validateInput);
 nextWordButton.addEventListener("click", nextWord);
